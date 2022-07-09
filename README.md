@@ -2,6 +2,7 @@
 A simple skript
 
 To ready the server run '/sunucuhazir'
+<br>
 To start the game run '/lavyukseliyorbaslat'
 To turn off scoreboard run '/ekrankapa'
 To turn on scoreboard run '/ekranac'
