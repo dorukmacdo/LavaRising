@@ -1,0 +1,160 @@
+command /lavbittir:
+    permission:lavyukseliyor.bittir
+    trigger:
+        send "&cLav Yukseliyor Bitti" to players
+        execute console command "whitelist on"
+        execute console command "kick @a Sunucu Yenileniyor"
+
+command /plugins:
+    trigger:
+        send "&cBu Komutu Kulanamazsın" to player
+
+
+command /pl:
+    trigger:
+        send "&cBu Komutu Kulanamazsın" to player
+
+command /ekrankapa:
+    trigger:
+        execute player command "asb toggle off"
+
+command /ekranac:
+    trigger:
+        execute player command "asb toggle on"
+
+
+on join:
+    send "&4[&2+&4] &c%player%" to players
+    teleport player to {%spawn%}
+
+on quit:
+       send "&4[&2+&4] &c%player%" to players
+
+on death:
+		execute player command "/gamemode spectators"
+
+
+command /sunucuhazir:
+    permission: lav.sunucuhazir
+    trigger:
+        execute console command "/gamerule fallDamage false"
+        execute console command "/difficulty peaceful"
+        execute console command "/whitelist off"
+        execute console command "/asb reload"
+        execute console command "/bossbar set minecraft:1 visible true"
+        execute console command "/bossbar set minecraft:1 players @a"
+        execute console command "/bossbar set minecraft:1 color red"
+        execute console command "/bossbar set minecraft:1 value 10"
+        execute console command "/bossbar set minecraft:1 max 10"
+        execute player command "/rg flag arena1 passthrough deny"
+        execute player command "/rg flag arena1 pvp deny"
+        execute console command "/clear @a"
+		
+command /alankuculut:
+	permission: op
+	trigger:
+		execute console command "/worldborder set 100 60"
+		send "&cAlan Küçülmeye Başlıyor Kaç" to players
+
+
+command /lavyukseliyorbaslat:
+    permission: lav.baslat
+    trigger:
+        execute console command "/whitelist on"
+        execute player command "/rg flag arena1 passthrough allow"
+        execute player command "/rg flag arena1 pvp deny"
+        execute console command "/clear @a"
+        execute console command "/give @a netherite_pickaxe"
+        execute console command "/give @a diamond_sword"
+        execute console command "/give @a diamond_axe"
+        execute console command "/give @a cobblestone 448"
+        execute console command "/give @a diamond_helmet"
+        execute console command "/give @a diamond_chestplate"
+        execute console command "/give @a diamond_leggings"
+        execute console command "/give @a diamond_boots"
+        execute console command "/give @a shield"
+        execute console command "/give @a minecraft:bread 32"
+        execute console command "/bossbar set minecraft:1 visible false"
+        execute console command "/bossbar set minecraft:2 visible true"
+        execute console command "/bossbar set minecraft:2 players @a"
+        execute console command "/bossbar set minecraft:2 color red"
+        execute console command "/bossbar set minecraft:2 value 10"
+        execute console command "/bossbar set minecraft:2 max 10"
+
+        wait 60 second
+
+        execute console command "/bossbar set minecraft:2 visible false"
+        execute console command "/bossbar set minecraft:3 visible true"
+        execute console command "/bossbar set minecraft:3 players @a"
+        execute console command "/bossbar set minecraft:3 color red"
+        execute console command "/bossbar set minecraft:3 value 10"
+        execute console command "/bossbar set minecraft:3 max 10"
+
+        wait 60 second
+
+        execute console command "/bossbar set minecraft:3 visible false"
+        execute console command "/bossbar set minecraft:4 visible true"
+        execute console command "/bossbar set minecraft:4 players @a"
+        execute console command "/bossbar set minecraft:4 color red"
+        execute console command "/bossbar set minecraft:4 value 10"
+        execute console command "/bossbar set minecraft:4 max 10"
+
+        wait 60 second
+
+        execute console command "/bossbar set minecraft:4 visible false"
+        execute console command "/bossbar set minecraft:5 visible true"
+        execute console command "/bossbar set minecraft:5 players @a"
+        execute console command "/bossbar set minecraft:5 color red"
+        execute console command "/bossbar set minecraft:5 value 10"
+        execute console command "/bossbar set minecraft:5 max 10"
+        
+        wait 60 second
+
+        execute console command "/bossbar set minecraft:5 visible false"
+
+        execute console command "/bossbar set minecraft:6 visible true"
+        execute console command "/bossbar set minecraft:6 players @a"
+        execute console command "/bossbar set minecraft:6 color red"
+        execute console command "/bossbar set minecraft:6 value 10"
+        execute console command "/bossbar set minecraft:6 max 10"
+		
+		execute console command "/start"
+
+        wait 60 second
+
+        execute console command "/bossbar set minecraft:6 visible false"
+        execute console command "/bossbar set minecraft:1 visible true"
+        execute console command "/bossbar set minecraft:1 players @a"
+        execute console command "/bossbar set minecraft:1 color red"
+        execute console command "/bossbar set minecraft:1 value 10"
+        execute console command "/bossbar set minecraft:1 max 10"
+
+        wait 60 second
+
+        execute console command "/lavyukseliyorbaslat"
+
+        send "&cYakın Zamanda Pvp Açılıcak" to players
+        wait 1 second
+        send "&cYakın Zamanda Pvp Açılıcak" to players
+        wait 1 second
+        send "&cYakın Zamanda Pvp Açılıcak" to players
+        wait 1 second
+        send "&cYakın Zamanda Pvp Açılıcak" to players
+        wait 24 second
+        send "&cPvP Açılyor" to players
+        send "&cPvP Açılyor" to players
+        send "&cPvP Açılyor" to players
+        wait 3 second
+        send "&cPvP Açıldi" to players
+        send "&cPvP Açıldi" to players
+        send "&cPvP Açıldi" to players
+        send "&cPvP Açıldi" to players
+        execute console command "/asb switch scoreboardpvp.yml"
+        wait 1 second
+        execute player command "/rg flag arena1 pvp allow"
+		
+        
+
+
+        
+
